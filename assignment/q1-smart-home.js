@@ -8,21 +8,39 @@
 
 // Task: Add code here
 
+
+// constructor = special method for assigning properties. Automatically called when creating an object
+
+class BaseSignal {
+    constructor(type) {
+        this.type = type;
+    }
+    send() {
+        console.log("Sending " + this.type + " signal");
+    }
+}
+
 class TvSignal extends BaseSignal {
-    constructor(){
-        // Add code here
+    constructor(type){
+        // Add code here 
+        type = "tv";
+        super(type);
     }
 }
 
 class AirconSignal extends BaseSignal {
-    constructor(){
+    constructor(type){
         // Add code here
+        type = "aircon";
+        super(type);
     }
 }
 
 class DoorSignal extends BaseSignal {
-    constructor(){
+    constructor(type){
         // Add code here
+        type = "door";
+        super(type);
     }
 }
 
